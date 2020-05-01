@@ -14,22 +14,24 @@ output: html_document
 
 #### What other research has been done in this area? Make sure to include 3+ links to related works, as well as a summary of what that work has discovered.
 
-* <https://www.organdonor.gov/sites/default/files/about-dot/files/nsodap-organ-donation-survey-2019.pdf>
-    + This report describes the main findings from the 2019 National Survey of Organ Donation Attitudes and Practices (NSODAP). 
+We found relative researches from [ORGANDONOR.GOV](https://www.organdonor.gov/).
 
-* <https://www.organdonor.gov/sites/default/files/about-dot/files/national-survey-organ-donation-2012.pdf>
-    + The survey included measures of attitudes and behaviors related to donation of organs for transplantation, discussing donation wishes with family, granting permission to donate, beliefs about the donation process, and opinions on policies related to donation.
+* The first related work is from the [National Survey of Organ Donation Attitudes and Practices, 2019](https://www.organdonor.gov/sites/default/files/about-dot/files/nsodap-organ-donation-survey-2019.pdf).
+    + This report describes the main findings from the 2019 National Survey of Organ Donation Attitudes and Practices (NSODAP). It included measures of attitudes and behaviors related to donation of organs for transplantation, discussing donation wishes with family, granting permission to donate, beliefs about the donation process, and opinions on policies related to donation.
 
-* <https://www.organdonor.gov/statistics-stories/statistics.html>
+* The second related work is from the [National Survey of Organ Donation Attitudes and Practices, 2012](https://www.organdonor.gov/sites/default/files/about-dot/files/national-survey-organ-donation-2012.pdf).
+    + The survey included measures of attitudes and behaviors related to donation of organs for transplantation, discussing donation wishes with family, granting permission to donate, beliefs about the donation process, and opinions on policies related to donation in 2012.
+
+* The third related work is from the [Organ Donation Statistics](https://www.organdonor.gov/statistics-stories/statistics.html).
     + This report shows the situation of the system of organ donation including issues like shortage and basic statistics about the donors and recipients with visualizations. 
 
 
 #### What is the dataset you'll be working with? 
-* Table of Contents for Results Tables for the 2019 National Survey of Organ Donation Attitudes and Practices (NSODAP) <https://www.organdonor.gov/about-dot/grants/research-reports>
+* The first dataset is [Table of Contents for Results Tables for the 2019 National Survey of Organ Donation Attitudes and Practices (NSODAP)](https://www.organdonor.gov/about-dot/grants/research-reports).
     + This dataset comes from the U.S. Department of Health and Human Services, Health Resources and Services Administration, Healthcare Systems Bureau, and the Division of Transplantation. It includes responses and demographics to an 86 question survey regarding people’s views on organ donation.
 
-* Donors Recovered in the U.S. by Donor Type <https://optn.transplant.hrsa.gov/data/view-data-reports/national-data/#>
-    + The second dataset is from the U.S. Department of Health & Human Services. The data was collected through an online database system which compiled from the Organ Procurement and Transplantation Network. It gives us the data statistics of different organs being donated in correlation to location, gender, age, and ethnicity, etc. 
+* The second dataset is about [Donors Recovered in the U.S. by Donor Type](https://optn.transplant.hrsa.gov/data/view-data-reports/national-data/#).
+    + This dataset is from the U.S. Department of Health & Human Services. The data was collected through an online database system which compiled from the Organ Procurement and Transplantation Network. It gives us the data statistics of different organs being donated in correlation to location, gender, age, and ethnicity, etc. 
 
 #### Who is your target audience?  Depending on the domain of your data, there may be a variety of audiences interested in using the dataset. You should hone in on one of these audiences.
 
