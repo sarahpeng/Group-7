@@ -2,7 +2,6 @@
 title: "Group 7 Porject Proposal"
 author: "Group Members: Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan "
 date: "5/1/2020"
-output: html_document
 ---
 ## **Organ Donations**
 ### Outline:
