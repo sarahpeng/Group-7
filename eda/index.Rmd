@@ -1,0 +1,16 @@
+---
+title: "Exploratory Analysis"
+output: html_document
+author: "Group Members: Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan "
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Distribution of Variables
+
+## Relationships between variables
+
+
+
