@@ -15,7 +15,11 @@ source("livingvsdeceaseddistribution.R")
 ***
 # Distribution of Variables
 
-In this graph, we see the total of donors from two categories: Living and Deceased from 1988 to 2020. The bar graph shows that there are more deceased donors than living donors. There are 60064 more deceased donors than living donors. The total of all donor types up to date is 395898 people.
+In this graph, we see the total of donors from two categories: Living and 
+Deceased from 1988 to 2020. The bar graph shows that there are more
+deceased donors than living donors. There are 60064 more deceased donors
+than living donors. The total of all donor types up to date is 395898
+people.
 
 ```{r, echo = FALSE}
 plot1
