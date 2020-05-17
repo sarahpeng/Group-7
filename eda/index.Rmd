@@ -4,11 +4,22 @@ output: html_document
 author: "Group Members: Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan "
 ---
 
-```{r setup, include=FALSE}
+``` {r setup, include = FALSE, echo = FALSE, message = TRUE}
 knitr::opts_chunk$set(echo = TRUE)
+library("knitr")
+library("plotly")
+library("httr")
+source("livingvsdeceaseddistribution.R")
 ```
 
-## Distribution of Variables
+***
+# Distribution of Variables
+
+In this graph, we see the total of donors from two categories: Living and Deceased from 1988 to 2020. The bar graph shows that there are more deceased donors than living donors. There are 60064 more deceased donors than living donors. The total of all donor types up to date is 395898 people.
+
+```{r, echo = FALSE}
+plot1
+```
 
 ## Relationships between variables
 
