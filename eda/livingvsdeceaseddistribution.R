@@ -11,13 +11,25 @@ living_vs_deceased <- living_vs_deceased %>%
     Ages = X.2
   )
 
-all_ages <- living_vs_deceased %>%
+
+#Donor Type Plot
+donor_type <- living_vs_deceased %>%
   select(Donors, Genders, Ages, To.Date)%>%
   filter(Ages== ("All Ages"),
          Genders== ("All Genders")
          )
 
-plot1 <-ggplot(data=all_ages, aes(x=Donors, y=To.Date)) + 
+plot1 <- ggplot(data=donor_type, aes(x=Donors, y=To.Date)) + 
   xlab("Types of Donors") + ylab("Number of Donors") + ggtitle("Living vs. Deceased Donors") +
   geom_bar(stat="identity", fill="steelblue")
 
+#Gender Type Plot
+gender_diff <-living_vs_deceased %>%
+  select(Donors, Genders, Ages, To.Date)%>%
+  filter(Ages== ("All Ages"),
+         Genders== c("Male","Female") 
+  )
+
+plot2 <- ggplot(data=gender_diff, aes(x=Genders, y=To.Date)) + 
+  xlab("Gender of Donors") + ylab("Number of Donors") + ggtitle("Male vs. Female Donors") +
+  geom_bar(stat="identity", fill="steelblue")
