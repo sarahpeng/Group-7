@@ -14,13 +14,15 @@ df <- subset(df, select = -c(X2020))
 df = df[-c(1),]
 
 
+names(df)[names(df) == "Age.Group"] <- "age_group"
+
 # get max, min and find range
 df$max <- apply(df[, 2:33], 1, max)
 df$min <- apply(df[, 2:33], 1, min)
 df$range <- df$max - df$min
 
 
-plot2 <- ggplot(data=df, aes(x=Age.Group, y=range)) +
+plot2 <- ggplot(data=df, aes(x=age_group, y=range)) +
   xlab("Age Group of Donors") + ylab("Range of Donators") + ggtitle("Range of Donators vs. Age Group of Donors") +
   geom_bar(stat="identity", fill="steelblue") +
   theme(axis.text.x = element_text(angle = 60, hjust = 1))
