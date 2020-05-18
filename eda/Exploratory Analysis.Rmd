@@ -27,7 +27,7 @@ mean_ages_plot
 
 
 ```{r, echo=FALSE}
-#plot2
+plot2
 
 ```
 
