@@ -15,7 +15,7 @@ source("livingvsdeceaseddistribution.R")
 ***
 # Distribution of Variables
 
-In this graph, we see the total of donors from two categories: Living and Deceased from 1988 to 2020. The bar graph shows that there are more deceased donors than living donors. There are 60064 more deceased donors than living donors. The total of all donor types up to date is 395898 people.
+In this graph, we see the total of donors from 1988 to 2020 in 9 age groups. The bar graph shows the range from 1988-2020 throughout each age group. From the graph, we see that the most organ donations came from people in the age range of 50-64 years old. The age groups with the fewer donations besides the Unknown, are <1 and 1-5 years old. 
 
 ```{r, echo = FALSE}
 plot1
