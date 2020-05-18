@@ -13,6 +13,8 @@ source("waiting_organ_type.R")
 source("donor_age_breakdown.R")
 source("donor_trend.R")
 ```
+## Introduction
+#### This is an exploration into organ donation data and includes data analysis on age distribution on donors, how the deceased vs living donor counts have changed over time, and the relationship between the types of organs donated and the number of people on the waiting list for that organ.
 
 ## Distribution of Variables
 
