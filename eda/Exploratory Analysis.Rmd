@@ -1,0 +1,49 @@
+---
+title: "Exploratory Analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyr)
+library(ggplot2)
+source("livingvsdeceaseddistribution.R")
+source("waiting_organ_type.R")
+source("waiting_organ_type.R")
+source("donor_age_breakdown.R")
+source("donor_trend.R")
+```
+## Introduction
+### This is an exploration into organ donation data and includes data analysis on age distribution of donors, how deceased vs living donor counts have changed over time, and the relationship between the donation waitlist, organ type, and blood type. We got our data from [Table of Contents for Results Tables for the 2019 National Survey of Organ Donation Attitudes and Practices (NSODAP)](https://www.organdonor.gov/about-dot/grants/research-reports) and [Donors Recovered in the U.S. by Donor Type](https://optn.transplant.hrsa.gov/data/view-data-reports/national-data/#) .
+
+## Distribution of Variables
+
+```{r, echo=FALSE}
+mean_ages_plot
+
+```
+
+#### This graph displays the distribution of the average number of donors per year by age group from 1988-2020. From this graph we can see that adults (ages 18-64), donate more than any other age group. When we think about this, it makes sense since most of the population is adults. While the elderly (ages 65+) are most likely to have more motivation to donate their organs than other age groups, since they likely have a shorter remaining life expectancy, we can see that older adults (ages 50-64) make up a larger percent of donors than elderly adults. Why would this be the case? While the elderly may be more willing, they are not likely to have as healthy organs, due to their age, making them less viable candidates to donate. Children (ages 0-17) on average donate the least. This is because children have the largest remaining life expectancy, than any other group. Most parents would not willingly allow their children to donate unless they are deceased or there are extreme circumstances. Overall this data follows a standard bell curve and has expected and understandable results. 
+
+
+```{r, echo=FALSE}
+plot2
+
+```
+
+#### In this graph, we see the total of donors from 1988 to 2020 in 9 age groups. The bar graph shows the range from 1988-2020 throughout each age group. From the graph, we see that the most organ donations came from people in the age range of 50-64 years old. The age groups with the fewer donations besides the Unknown, are <1 and 1-5 years old.
+
+## Relationships between variables
+
+### Ming 
+```{r, echo=FALSE}
+donor_trend
+    
+```
+
+#### Throughout the last 20 years, there is this growing trend for both types of the donor. The number of deceased donors has been gradually increasing. As for the number of living donors, there are waves of decreasing around 2010, nevertheless, it has a total increase of more than twice comparing to the past. Based on the survey, more people through out all age-groups have heard of, or willing to donate their organs, however, there is only 10% of them who would do it after there deaths. This is worth a deeper investigation because it does not fit with neither the steady growth of deceased donors nor the out-number of living donors by deceased donors. 
+
+```{r, echo=FALSE}
+waiting_plot
+    
+```

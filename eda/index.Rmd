@@ -21,6 +21,10 @@ In this graph, we see the total of donors from 1988 to 2020 in 9 age groups. The
 plot1
 ```
 
+```{r, echo = FALSE}
+mean_ages_plot
+```
+
 ## Relationships between variables
 
 

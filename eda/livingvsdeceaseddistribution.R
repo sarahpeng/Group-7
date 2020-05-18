@@ -1,9 +1,9 @@
 library(dplyr)
 library(ggplot2)
 library(magrittr)
-install.packages("ggplot2")
-install.packages("dplyr")
-install.packages("magrittr")
+#install.packages("ggplot2")
+#install.packages("dplyr")
+#install.packages("magrittr")
 
 #populating 1st column
 living_vs_deceased <- read.csv(file = 'donordata.csv')
