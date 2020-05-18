@@ -4,8 +4,12 @@ install.packages("ggplot2")
 
 living_vs_deceased <- read.csv(file = 'distributiondata.csv')
 
+living_vs_deceased <- living_vs_deceased %>% 
+  rename(
+    Donors = X
+  )
 
-plot1 <- barplot(living_vs_deceased$To.Date, names.arg= living_vs_deceased$Donors, col = rainbow(400000), 
-        xlab ="Types of Donors", ylab="Number of Donors", main="Living vs. Deceased Donors", 
-        beside=TRUE, ylim=range(pretty(c(0, living_vs_deceased$Donors)), ylim=c(0,400000)))
+plot1 <-ggplot(data=living_vs_deceased, aes(x=Donors, y=To.Date)) + 
+  xlab("Types of Donors") + ylab("Number of Donors") + ggtitle("Living vs. Deceased Donors") +
+  geom_bar(stat="identity", fill="steelblue")
 
