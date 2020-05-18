@@ -1,8 +1,11 @@
 library(dplyr)
 library(ggplot2)
 library(magrittr)
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("magrittr")
 
-living_vs_deceased <- read.csv(file = 'distributiondata.csv')
+living_vs_deceased <- read.csv(file = 'donordata.csv')
 
 living_vs_deceased <- living_vs_deceased %>% 
   rename(
@@ -33,4 +36,3 @@ gender_diff <-living_vs_deceased %>%
 plot2 <- ggplot(data=gender_diff, aes(x=Genders, y=To.Date)) + 
   xlab("Gender of Donors") + ylab("Number of Donors") + ggtitle("Male vs. Female Donors") +
   geom_bar(stat="identity", fill="steelblue")
-
