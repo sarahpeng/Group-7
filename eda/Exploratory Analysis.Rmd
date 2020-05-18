@@ -1,0 +1,44 @@
+---
+title: "Exploratory Analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyr)
+library(ggplot2)
+source("livingvsdeceaseddistribution.R")
+source("waiting_organ_type.R")
+source("waiting_organ_type.R")
+source("donor_age_breakdown.R")
+source("donor_trend.R")
+```
+
+## Distribution of Variables
+
+```{r, echo=FALSE}
+mean_ages_plot
+
+```
+
+```{, echo=FALSE}
+#plot2
+
+```
+
+#### In this graph, we see the total of donors from 1988 to 2020 in 9 age groups. The bar graph shows the range from 1988-2020 throughout each age group. From the graph, we see that the most organ donations came from people in the age range of 50-64 years old. The age groups with the fewer donations besides the Unknown, are <1 and 1-5 years old.
+
+## Relationships between variables
+
+### Ming 
+```{r, echo=FALSE}
+donor_trend
+    
+```
+
+#### Throughout the last 20 years, there is this growing trend for both types of the donor. The number of deceased donors has been gradually increasing. As for the number of living donors, there are waves of decreasing around 2010, nevertheless, it has a total increase of more than twice comparing to the past. Based on the survey, more people through out all age-groups have heard of, or willing to donate their organs, however, there is only 10% of them who would do it after there deaths. This is worth a deeper investigation because it does not fit with neither the steady growth of deceased donors nor the out-number of living donors by deceased donors. 
+
+```{r, echo=FALSE}
+waiting_plot
+    
+```
