@@ -21,6 +21,10 @@ In this graph, we see the total of donors from two categories: Living and Deceas
 plot1
 ```
 
+```{r, echo = FALSE}
+mean_ages_plot
+```
+
 ## Relationships between variables
 
 
