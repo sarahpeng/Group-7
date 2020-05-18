@@ -1,6 +1,7 @@
 ---
 title: "Exploratory Analysis"
 output: html_document
+author: "Group Members: Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan "
 ---
 
 ```{r setup, include=FALSE}
@@ -8,7 +9,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyr)
 library(ggplot2)
 source("livingvsdeceaseddistribution.R")
-source("waiting_organ_type.R")
 source("waiting_organ_type.R")
 source("donor_age_breakdown.R")
 source("donor_trend.R")
@@ -45,5 +45,7 @@ donor_trend
 
 ```{r, echo=FALSE}
 waiting_plot
-    
 ```
+
+#### This graph displays the relationship between organ type and the number of people waiting for that organ by blood type. Top 5 in-demand organ was chosen to display. My independent variable is continous which is the number of people wahiting for a organ, and my dependent variable is categorical which is the type of organ a person is waiting for. I chose look at the numbers by blood type. From the graph, I found that kidney is the most in-demand organ. The demand for kidney is about 8 times as high as the second in-demand organ. The reason I believe is that although kidney can come from living donors, kidney failure is so rampant that there are still not enough donated organs to meet the demand. 
+#### I also found that There are more people with blood type O waiting for donation for all organs. I believe that is because people blood type O are compatible only with organs donated by another type O person. However, O blood type is universal donors because all other blood types are also compatible with type O blood. Therefore, it is harder for type O blood person to receive the right organ. Perple with AB blood type. in contrast, has the less amount of people waiting for donation because AB blood type is compatible with blood types A,B,AB or O and they are the universal recipients. 

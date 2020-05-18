@@ -21,7 +21,7 @@ df$range <- df$max - df$min
 
 df <- df %>% 
   rename(
-Age.Group = ï..Age.Group
+Age.Group = ?..Age.Group
 )
 
 plot2 <- ggplot(data=df, aes(x=Age.Group, y=range)) +
