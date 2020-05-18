@@ -21,8 +21,8 @@ df$range <- df$max - df$min
 
 df <- df %>% 
   rename(
-Age.Group = ?..Age.Group
-)
+    Age.Group = ï..Age.Group
+  )
 
 plot2 <- ggplot(data=df, aes(x=Age.Group, y=range)) +
   xlab("Age Group of Donors") + ylab("Range of Donators") + ggtitle("Range of Donators vs. Age Group of Donors") +
