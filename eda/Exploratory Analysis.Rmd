@@ -41,7 +41,7 @@ donor_trend
     
 ```
 
-### Throughout the last 20 years, there is this growing trend for both types of the donor. The number of deceased donors has been gradually increasing. As for the number of living donors, there are waves of decreasing around 2010, nevertheless, it has a total increase of more than twice comparing to the past. Based on the survey, more people through out all age-groups have heard of, or willing to donate their organs, however, there is only 10% of them who would do it after there deaths. This is worth a deeper investigation because it does not fit with neither the steady growth of deceased donors nor the out-number of living donors by deceased donors. 
+### Throughout the last 20 years, there has been a growing trend for both types of the donors: deceased and living. Though there is a downward trend from 2005 to 2015 for the living donors, the total increase in donations is more than double comparing to the number of donations in 1998. The number of deceased donors has been gradually increasing, meaning that more and more people are willing to donate once they die. Over the years, the number of deceased donations has almost doubled, and almost every year there have been more deceased donors than living. While it is not surprising that there are more deceased donors than living, the rate at which the deceased donations are growing is surprising. While more people throughout all age-groups are familiar and willing to donate their organs, survey result shows that only 10% of them who would do it after their deaths. This would indicate a slower deceased growth rate than what we are seeing. A deeper investigation with more data would be conducted in the future to verify results.
 
 ```{r, echo=FALSE}
 waiting_plot
