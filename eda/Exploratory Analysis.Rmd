@@ -31,11 +31,11 @@ plot2
 
 ```
 
-### In this graph, we see the total of donors from 1988 to 2020 in 9 age groups. The bar graph shows the range from 1988-2020 throughout each age group. From the graph, we see that the most organ donations came from people in the age range of 50-64 years old. The age groups with the fewer donations besides the Unknown, are <1 and 1-5 years old.
+### In this graph, we see the year to year range of donors from across 9 age groups. The bar graph shows the range from 1988-2020 throughout each age group. From the graph, we see the greatest range of organ donations came from people in the age range of 50-64 years old. This means that there is a larger variability for that age group to be donors per year. For example, in 2019 there were a total of 5572 donors, but in 1988 for that age group, there were only 662 donors. That is a range of 4910 donors. Although this age group has one of the most donors per year on average, the number of donations can actually fluctuate greatly year to year. This means that there isn’t a guaranteed number of donors in this any age group (especially 50-64 year olds), so more people should donate their organs. On the other hand, age groups <1, 1-5, and 6-10 years old had a lower variability meaning the numbers of donors were more consistent from year to year. A larger range in age groups could be due to widespread illness, natural disasters, accidents or other unknown factors.
 
 ## Relationships between variables
 
-### Ming 
+ 
 ```{r, echo=FALSE}
 donor_trend
     
@@ -47,5 +47,5 @@ donor_trend
 waiting_plot
 ```
 
-### This graph displays the relationship between organ type and the number of people waiting for that organ by blood type. Top 5 in-demand organ was chosen to display. My independent variable is continous which is the number of people wahiting for a organ, and my dependent variable is categorical which is the type of organ a person is waiting for. I chose look at the numbers by blood type. From the graph, I found that kidney is the most in-demand organ. The demand for kidney is about 8 times as high as the second in-demand organ. The reason I believe is that although kidney can come from living donors, kidney failure is so rampant that there are still not enough donated organs to meet the demand. 
-### There are more people with blood type O waiting for donation for all organs. I believe that is because people blood type O are compatible only with organs donated by another type O person. However, O blood type is universal donors because all other blood types are also compatible with type O blood. Therefore, it is harder for type O blood person to receive the right organ. Perple with AB blood type. in contrast, has the less amount of people waiting for donation because AB blood type is compatible with blood types A,B,AB or O and they are the universal recipients. 
+### This graph displays the relationship between the top 5 in-demand organ types and the number of people waiting for that organ by blood type. From the graph, we can see that the kidney is the most in-demand organ. The demand for kidney is about 8 times greater than the second in-demand organ,liver. This shows that although kidneys can come from living donors, kidney failure is so rampant and that there are still not enough donated organs to meet the demand. This graph also includes information on blood type. 
+### There are more people with blood type O waiting for donation for all organs. This is because people blood type O are compatible only with organs donated by another type O person. However, O blood type is the universal donor because all other blood types are also compatible with type O blood. Therefore, it is harder for O blood typw person to receive the right organ. Perple with AB blood type. in contrast, have the least amount of people waiting for donation because AB blood type is compatible with blood types A,B,AB or O and they are the universal recipients. 

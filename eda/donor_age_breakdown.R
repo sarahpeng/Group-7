@@ -6,17 +6,12 @@ library(magrittr)
 df <- read.csv(file = 'all_donor_data.csv')
 
 # convert to numeric
-df[, c(2:33)] <- sapply(df[, c(2:33)], as.numeric)
-
-# drop 2020 column b/c of incomplete data
-df <- subset(df, select = -c(X2020))
+df[, c(2:34)] <- sapply(df[, c(2:34)], as.numeric)
 # drop all ages
 df = df[-c(1),]
-
-
 # get max, min and find range
-df$max <- apply(df[, 2:33], 1, max)
-df$min <- apply(df[, 2:33], 1, min)
+df$max <- apply(df[, 2:34], 1, max)
+df$min <- apply(df[, 2:34], 1, min)
 df$range <- df$max - df$min
 
 df <- df %>% 
