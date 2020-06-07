@@ -10,6 +10,29 @@ page_one <- tabPanel(
 page_two <- tabPanel(
   "Organ Donor" 
 )
+
+Donors_input <- radioButtons(
+  inputId = "Donor_Type",
+  label = "Donors",
+  choices = c("Living Donor", "Deceased Donor")
+)
+
+Organ_input <- selectInput(
+  inputId = "Organ",
+  label = "Organ",
+  choices = c("Kidney", "Liver", "Heart", "Pancreas", "Lung", "Intestine")
+)
+
+page_two <- tabPanel(
+  "Donors",
+  Donors_input,
+  Organ_input,
+  plotOutput("piechart_plot"),
+  plotOutput("blood_type_plot")
+)
+
+
+
 Waiting_OT_input <- selectInput(
   inputId = "organ_type",
   label = "Organ Type",
@@ -43,4 +66,3 @@ ui <- navbarPage(
   page_three,
   page_four
 )
-
