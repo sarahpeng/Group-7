@@ -97,10 +97,32 @@ Waiting_fill_input <- radioButtons(
 )
 page_three <- tabPanel(
   "Current U.S. Waiting List for Organs",
+  tags$h1("This page shows the current U.S. Waiting List for Organs."),
+  br(),
+  tags$h2("In this interactive bar chart,  you can choose an organ type and see the number of people waiting for organ by blood type or age. "),
+  br(),
   Waiting_OT_input,
   Waiting_X_input,
   Waiting_fill_input,
-  plotOutput("waiting_plot")
+  plotOutput("waiting_plot"),
+  br(),
+  tags$h1("Note:"),
+  tags$h2("By comparing the graph across organs, we can see that the kidney is the most in-demand organ.
+  The demand for kidney is about 8 times greater than the second in-demand organ, liver.
+  This shows that although kidneys can come from living donors, kidney failure is so
+  rampant and that there are still not enough donated organs to meet the demand."),
+  tags$h2("There are more people with blood type O waiting for donation for all organs.
+  This is because people blood type O are compatible only with organs donated by another type O person.
+  However, O blood type is the universal donor because all other blood types are also compatible with type O blood.
+  Therefore, it is harder for O blood type person to receive the right organ.
+  People with AB blood type. in contrast, have the least amount of people waiting for donation because
+  AB blood type is compatible with blood types A, B, AB or O and they are the universal recipients."),
+  tags$h2("The age group with the largest number of individuals on the transplant waiting list for
+  all organs are those aged 50-64 years. Approximately 60 percent of all people waiting for organs are
+  50 years and older.There are over 5000 people under the age 18 waiting for
+  organ donations. One surprising finding is that more than three quarter of people waiting
+  for intestinal are under the age of 18 and the age group with the largest number of individuals
+  on the intestine waiting list is children from 1-5 years old.")
 )
 page_five <- tabPanel(
   "Conclusion"
@@ -134,7 +156,7 @@ When reviewing true or false statements (the last three graphs), the survey resu
 It is important to note, that this data is only survey data, and that the number of deceased donors could be higher, since they cannot take the survey.")
 )
 ui <- navbarPage(
-  theme = shinytheme("sandstone"),
+  theme = shinytheme("cerulean"),
   "Organ Donation",
   page_one,
   page_two,
