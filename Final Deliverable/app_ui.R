@@ -100,7 +100,6 @@ page_four <- tabPanel(
   "Interpretation"
 )
 page_five <- tabPanel("Survey",tags$h4("Background"),
-<<<<<<< HEAD
                        p("The 2019 National Survey of Organ Donation Attitudes and
                           Practices is a nationally representative survey conducted to
                           understand public opinion about organ donation and transplantation,
@@ -117,62 +116,15 @@ page_five <- tabPanel("Survey",tags$h4("Background"),
                                                                             of the population, most people recognize the importance of donation and are open
                                                                             to the idea of being a donor. How can this number increase?"), tags$h4("Graphs"),
                        p("When asked if many people in the national transplant waiting list die because the
-                          organ they need isn’t donated in time, people responded:"),plotOutput("waitlist_plot"),
+                          organ they need isn't donated in time, people responded:"),plotOutput("waitlist_plot"),
                        p("When asked if you strongly support, support oppose, or strongly oppose the donation of organs for transplants,
                           people responded"), plotOutput("transSupport_plot"), p("When asked if you would want your organs donated after death, people responded"),
                        plotOutput("donateDeath_plot"), p("And when asked whether you beleive the following statements
                                                           about organ donation are true, people responded"), plotOutput("kidney_plot"),plotOutput("liver_plot"),plotOutput("lung_plot"),
                        tags$h4("Analysis")
 )
-=======
-                      p("The 2019 National Survey of Organ Donation Attitudes and 
-                      Practices is a nationally representative survey conducted to 
-                      understand public opinion about organ donation and transplantation, 
-                      and how those opinions have shifted over time. This survey was 
-                      completed by 10,000 U.S. adults online or by phone."), 
-                      tags$h4("Survey Responses"), p("From the survey participants, 
-                        23.4% of people personally had or had someone close to them been an 
-                        organ donor, 16.5% of people personally had or had someone close to them
-                        receive an organ transplant, and only 8.3% of people is or knows someone 
-                        close to them, that is currently waiting for an organ. Of these 10,000 people, 
-                        50% of them have signed up to be an organ donor, and 69.1% of them would be
-                        willing to sign up. While organ donation has not personally affected a majority 
-<<<<<<< HEAD
-                        of the population, most people recognize the importance of donating and are open
-                        to the idea of being a donor. However, what can be done to increase the number of people
-                        that are signed up to donate?"), 
-                      
-                      tags$h4("Graphs"),
-                      p("When asked if many people on the national transplant waiting list die because the
-                        organ they need is not donated in time, people responded:"),plotOutput("waitlist_plot"),
-                      p("When asked if you strongly support, support, oppose, or strongly oppose the donation of organs for transplants,
-                        people responded"), plotOutput("transSupport_plot"), 
-                      p("When asked if you would want your organs donated after death, people responded"), plotOutput("donateDeath_plot"), 
-                      p("And when asked whether you beleive the following statements about organ donation are true, people responded"), 
-                      plotOutput("kidney_plot"),plotOutput("liver_plot"),plotOutput("lung_plot"),
-                      
-=======
-                        of the population, most people recognize the importance of donation and are open
-                        to the idea of being a donor. How can this number increase?"), tags$h4("Graphs"),
-                      p("When asked if many people in the national transplant waiting list die because the
-<<<<<<< HEAD
-                        organ they need isn't donated in time, people responded:"), p("When asked if you 
-                        strongly support, support oppose, or strongly oppose the donation of organs for transplants,
-                        people responded"), p("When asked if you would want your organs donated after death, people responded"),
-                      p("And when asked whether you beleive the following statements about organ donation are true, people responded"), 
-                      tags$h4("Analysis"))
-=======
-                        organ they need isn't donated in time, people responded:"),plotOutput("waitlist_plot"),
-                        p("When asked if you strongly support, support oppose, or strongly oppose the donation of organs for transplants,
-                        people responded"), plotOutput("transSupport_plot"), p("When asked if you would want your organs donated after death, people responded"),
-                      plotOutput("donateDeath_plot"), p("And when asked whether you beleive the following statements 
-                      about organ donation are true, people responded"), plotOutput("kidney_plot"),plotOutput("liver_plot"),plotOutput("lung_plot"),
->>>>>>> e8e9ca55763b8442fcc54bbaf55f1656232f620f
-                      tags$h4("Analysis")
-                      )
->>>>>>> b0d8451b0f453f0e1bb044ebbde655102dd6bbff
 
->>>>>>> 66c1f6e5702fc5b08ae99851915ee84e4c37a8a0
+
 ui <- navbarPage(
   theme = shinytheme("sandstone"),
   "Organ Donation",
