@@ -125,7 +125,11 @@ page_four <- tabPanel("Survey",tags$h1("Background"),
                           people responded"), plotOutput("transSupport_plot"), tags$h2("When asked if you would want your organs donated after death, people responded"),
                        plotOutput("donateDeath_plot"), tags$h2("And when asked whether you beleive the following statements
                                                           about organ donation are true, people responded"), plotOutput("kidney_plot"),plotOutput("liver_plot"),plotOutput("lung_plot"),
-                       tags$h1("Analysis")
+                       tags$h1("Analysis"), tags$h2("From the graphs shown, it can be concluded that people recognize the urgency for organ donation and that in theory many people support the idea donating because of this. However, when asked if people would actually want to have their organs donated after death, the majority of people answered no. While it is easy to say and recognize that other people on the organ waiting list need organs, it can be difficult to offer one's own body. People can have several different reasons why they may not want to donate after death.
+
+When reviewing true or false statements (the last three graphs), the survey results show that although many people beleive that kidneys and livers can be donated by living people, only half the population believes that parts of lungs can as well. The corrrect answer to these questions is yes, parts of livers, kidneys, and lungs can be donated by the living. If there is more awareness of these facts, and possibly more advertising of organ donation in general, then maybe people would become more willing to donate their own organs. 
+
+It is important to note, that this data is only survey data, and that the number of deceased donors could be higher, since they cannot take the survey.")
 )
 ui <- navbarPage(
   theme = shinytheme("sandstone"),
