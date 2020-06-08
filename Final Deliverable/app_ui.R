@@ -95,10 +95,34 @@ Overall, from the pie graph, we see that there is a 16% higher chance of organ
   
 ))
 
+page_five <- tabPanel("Survey",tags$h4("Background"),
+                      p("The 2019 National Survey of Organ Donation Attitudes and 
+                      Practices is a nationally representative survey conducted to 
+                      understand public opinion about organ donation and transplantation, 
+                      and how those opinions have shifted over time. This survey was 
+                      completed by 10,000 U.S. adults online or by phone."), tags$h4("Demographics"),
+                      p("Below is a table breakdown of the demographics for the 10,000 people who 
+                        were surveyed."), tags$h4("Survey Responses"), p("From the survey participants, 
+                        23.4% of people had personally or had someone close to them been an 
+                        organ donor, 16.5% of people had personally or had someone close to them
+                        receive an organ transplant, and only 8.3% of people is or knows someone 
+                        close to them, that is currently waiting for an organ. Of these 10,000 people, 
+                        50% of them have signed up to be an organ donor, and 69.1% of them would be
+                        willing to sign up. While organ donation has not personally affected a majority 
+                        of the population, most people recognize the importance of donation and are open
+                        to the idea of being a donor. How can this number increase?"), tags$h4("Graphs"),
+                      p("When asked if many people in the national transplant waiting list die because the
+                        organ they need isn't donated in time, people responded:"), p("When asked if you 
+                        strongly support, support oppose, or strongly oppose the donation of organs for transplants,
+                        people responded"), p("When asked if you would want your organs donated after death, people responded"),
+                      p("And when asked whether you beleive the following statements about organ donation are true, people responded"), 
+                      tags$h4("Analysis"))
+
 ui <- navbarPage(
   "My Application", 
   page_one,         
   page_two,         
   page_three,
-  page_four
+  page_four,
+  page_five 
 )

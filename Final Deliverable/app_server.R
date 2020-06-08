@@ -5,6 +5,7 @@ library(tidyr)
 library(magrittr)
 library(reshape2)
 source("donorapp.R")
+source("survey.R")
 
 
 server <- function(input, output) {
@@ -84,5 +85,11 @@ server <- function(input, output) {
     
   })
   
+waitlist
+transSupport
+donateDeath
+kidneys
+livers
+lungs
   
 }
