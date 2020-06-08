@@ -5,22 +5,26 @@ waiting_time <- read.csv("Organ_by_Blood_Type.csv", stringsAsFactors = FALSE)
 library(shiny)
 page_one <- tabPanel(
   "Introduction",
-  h1(strong("Introduction")),img(src='logo1.jpg', align = "right"),
+  h1(strong("Introduction")), 
   tags$h1("Objective:"),
-  p("Organ donation is an important part of the health care system which has not received enough attention. Many people only have heard about it, however, they either have not signed up to
+  tags$h2("Organ donation is an important part of the health care system which has not received enough attention. Many people only have heard about it, however, they either have not signed up to
      be donors nor have them realized the fact that there are lives saved by receiving the right organ. We want to compare the attitudes towards organ donations and transplants to the actual donation
      statistics to see if the correlation between support and action. And probably make more people participate in the system."),
   tags$h1("What we have:"),
-  p("There are three interactive graphs in this app. The donor & organ type graph shows users the trend of the supply of a certain organ from past till now, differentiated by donor types and blood types.
+  tags$h2("There are three interactive graphs in this app. The donor & organ type graph shows users the trend of the supply of a certain organ from past till now, differentiated by donor types and blood types.
      The trend of supply tells the preference of donors when it comes to organ donation. The waiting list graph visualized the demand of organs differentiated by blood types and age. Combining both graphs,
      users will have findings including but not limited to which organ is most wanted and which organ has more supplies than demands. As for the table, latest information on how general population view organ
      donation is shown. The attitudes and actions are compared."),
   tags$h1("Sources:"),
-  p("Data used is mainly from: "), fluidPage(uiOutput("tab")),
-  p("The survey is from: "), fluidPage(uiOutput("tab2")),
+  tags$h2("Data used is mainly from: "), fluidPage(uiOutput("tab")),
+  tags$h2("The survey is from: "), fluidPage(uiOutput("tab2")),
   tags$h1("Contributors:"),
-  p("Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan")
+  tags$h2("Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan"),
+  p(""),
+  img(src='logo1.jpg', align = "bottom"),
+  img(src='logo2.jpg', align = "bottom")
 )
+
 page_two <- tabPanel(
   "Organ Donor"
 )
