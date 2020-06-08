@@ -1,18 +1,18 @@
 Category,Specification,Amount
 Sex,Female,5301
-Sex,Male,4609
+,Male,4609
 Age,18-34,3019
-Age,35-54,1908
-Age,55-65,2411
-Age,65+,1942
+,35-54,1908
+,55-65,2411
+,65+,1942
 Race,White,6718
-Race,Black,1059
-Race,Asian,1045
-Race,Native American,798
-Race,Multiple/Other,380
+,Black,1059
+,Asian,1045
+,Native American,798
+,Multiple/Other,380
 Ethnicity,Hispanic,1104
-Ethnicity,Non-Hispanic,8896
+,Non-Hispanic,8896
 Education,High School or Less,2104
-Education,Some College/Technical/Vocational,2981
-Education,College Graduate,3200
-Education,Postgraduate,1674
+,Some College/Technical/Vocational,2981
+,College Graduate,3200
+,Postgraduate,1674
