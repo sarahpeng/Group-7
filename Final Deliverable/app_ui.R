@@ -28,9 +28,15 @@ page_two <- tabPanel(
   Donors_input,
   Organ_input,
   plotOutput("piechart_plot"),
-  plotOutput("blood_type_plot")
+  plotOutput("blood_type_plot"),
+  tags$h4("Note:"),
+  p("The pie chart shows the proportion of the two types of donors. As you can see, 
+    there is more deceased donors than living donors. The interactive part shows users
+    the trend of supply of a specific organ throughout the last 30 years. By picking a donor type
+    first, then a organ, the graph will mark the trend using different colored lines which 
+    represent different blood types for each organ."
   
-)
+))
 
 
 
