@@ -5,7 +5,7 @@ waiting_time <- read.csv("Organ_by_Blood_Type.csv", stringsAsFactors = FALSE)
 library(shiny)
 page_one <- tabPanel(
   "Introduction",
-  h1(strong("Introduction")),img(src='logo1.jpg', align = "right"),
+  h1(strong("Introduction")), 
   tags$h1("Objective:"),
   p("Organ donation is an important part of the health care system which has not received enough attention. Many people only have heard about it, however, they either have not signed up to
      be donors nor have them realized the fact that there are lives saved by receiving the right organ. We want to compare the attitudes towards organ donations and transplants to the actual donation
@@ -19,8 +19,12 @@ page_one <- tabPanel(
   p("Data used is mainly from: "), fluidPage(uiOutput("tab")),
   p("The survey is from: "), fluidPage(uiOutput("tab2")),
   tags$h1("Contributors:"),
-  p("Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan")
+  p("Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan"),
+  p(""),
+  img(src='logo1.jpg', align = "bottom"),
+  img(src='logo2.jpg', align = "bottom")
 )
+
 page_two <- tabPanel(
   "Organ Donor"
 )
