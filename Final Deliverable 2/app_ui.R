@@ -5,7 +5,7 @@ waiting_time <- read.csv("Organ_by_Blood_Type.csv", stringsAsFactors = FALSE)
 library(shiny)
 page_one <- tabPanel(
   "Introduction",
-  h1(strong("Introduction")), 
+  h1(strong("INTRODUCTION")), 
   tags$h1("Objective:"),
   tags$h2("Organ donation is an important part of the health care system which has not received enough attention. While many people are aware of the need for donations, people still have not signed up to
      be donors. We want to compare the attitudes towards organ donations and transplants to the actual donation
@@ -19,7 +19,7 @@ page_one <- tabPanel(
   general population view organ donation is shown. The attitudes and actions are compared."),
   tags$h1("Sources:"),
   tags$h2("Graphing Data for Donor & Waitlist pages: "), fluidPage(uiOutput("tab")),
-  tags$h2("survey Data: "), fluidPage(uiOutput("tab2")),
+  tags$h2("Survey Data: "), fluidPage(uiOutput("tab2")),
   tags$h1("Contributors:"),
   tags$h2("Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan"),
   p(""),
@@ -51,7 +51,7 @@ page_two <- tabPanel(
   br(),
   br(),
   plotOutput("piechart_plot"),
-  tags$h1("Donors"),
+  tags$h1("Analysis"),
   tags$h2("In this page, the graph shows the blood type of either the living or
      deceased donor organ from 1988 to 2019. We did not include the data from
      2020 because it was incomplete. From the graph, we see that theorgans that
@@ -106,7 +106,7 @@ page_three <- tabPanel(
   Waiting_fill_input,
   plotOutput("waiting_plot"),
   br(),
-  tags$h1("Note:"),
+  tags$h1("Waiting List:"),
   tags$h2("By comparing the graph across organs, we can see that the kidney is the most in-demand organ.
   The demand for kidney is about 8 times greater than the second in-demand organ, liver.
   This shows that although kidneys can come from living donors, kidney failure is so
@@ -125,7 +125,30 @@ page_three <- tabPanel(
   on the intestine waiting list is children from 1-5 years old.")
 )
 page_five <- tabPanel(
-  "Conclusion"
+  "Conclusion", tags$h1(strong("CONCLUSION")), tags$h2("Based on the information and analysis provided on the past three pages a few conclusions can 
+                        be drawn. When reviewing the donor page information, we can see that there has been a steady
+                        growth in the number of donations for all organ types since 1988. It is important to note
+                        that AB positive donors were the most common throughout all years. This surprising, being that
+                        AB- and AB+ blood types are the rarest. Among the donor datam we can also see that there were
+                        more deceased donors than living and that kidneys were the most common organ to be donated. 
+                        The least common organ to be donated was the intestine."), tags$h2("When reviewing the 
+                        waitilist information page, it can be seen that kidney was the most in demand organ. This shows
+                        a correlation with kidneys being the top donated organ. Although kidneys are donated the most, in
+                        efforts to match the high demand, there still remains a large need for more kidney donations. 
+                        The number of people waiting for kidneys, is 5 times greater than the number of kidneys donated
+                        per year. The waitinglist data also shows that organs with O blood types are in the highest demand. 
+                        This makes sense since O- blood types are the univeral donor, meaning that they can be given to anyone.
+                        Also this section showed that people ages 56-64, has the highest number of people on the waiting list."),
+                        tags$h2("From the survey data, it is clear that people support the concept of donation and know that 
+                        people on the waiting list are dying, waiting for an organ match. However, only half of the population
+                        is actually signed up as organ donors, and the majority of people do not want to donate once they are deceased.
+                                This contradicts the data from the donor page, since more donors are deceased. What this means, is that
+                                although people may be signed up as donors, many do not donate while alive. From the survey, it showed
+                                that a decent amount of people are unaware that they can donate parts of their kidneys, liver, and lungs,
+                                while they are still living. If there is more awareness of this fact, then hopefully more people 
+                                will donate while living."),
+                        tags$h2("No matter what organs will be needed from as many donors, both living and deceased, as possible. 
+                                Through education, analysis, and awareness, we beleive and hope that more people will consider donating.")
 )
 page_four <- tabPanel("Survey",tags$h1("Background"),
                        tags$h2("The 2019 National Survey of Organ Donation Attitudes and
@@ -149,7 +172,7 @@ page_four <- tabPanel("Survey",tags$h1("Background"),
                           people responded"), plotOutput("transSupport_plot"), tags$h2("When asked if you would want your organs donated after death, people responded"),
                        plotOutput("donateDeath_plot"), tags$h2("And when asked whether you beleive the following statements
                                                           about organ donation are true, people responded"), plotOutput("kidney_plot"),plotOutput("liver_plot"),plotOutput("lung_plot"),
-                       tags$h1("Analysis"), tags$h2("From the graphs shown, it can be concluded that people recognize the urgency for organ donation and that in theory many people support the idea donating because of this. However, when asked if people would actually want to have their organs donated after death, the majority of people answered no. While it is easy to say and recognize that other people on the organ waiting list need organs, it can be difficult to offer one's own body. People can have several different reasons why they may not want to donate after death.
+                       tags$h1("Analysis:"), tags$h2("From the graphs shown, it can be concluded that people recognize the urgency for organ donation and that in theory many people support the idea donating because of this. However, when asked if people would actually want to have their organs donated after death, the majority of people answered no. While it is easy to say and recognize that other people on the organ waiting list need organs, it can be difficult to offer one's own body. People can have several different reasons why they may not want to donate after death.
 
 When reviewing true or false statements (the last three graphs), the survey results show that although many people beleive that kidneys and livers can be donated by living people, only half the population believes that parts of lungs can as well. The corrrect answer to these questions is yes, parts of livers, kidneys, and lungs can be donated by the living. If there is more awareness of these facts, and possibly more advertising of organ donation in general, then maybe people would become more willing to donate their own organs. 
 

@@ -11,11 +11,11 @@ source("survey.R")
 server <- function(input, output) {
   url1 <- a("Organ Donation Statistics", href="https://www.organdonor.gov/statistics-stories/statistics.html")
   output$tab <- renderUI({
-    tagList("URL link:", url1)
+    tagList("", url1)
   })
   url2 <- a("National Survey of Organ Donation Attitudes and Practices", href="https://www.organdonor.gov/sites/default/files/about-dot/files/nsodap-organ-donation-survey-2019.pdf")
   output$tab2 <- renderUI({
-    tagList("URL link:", url2)
+    tagList("", url2)
   })
   
   waiting_time <- read.csv("Organ_by_Blood_Type.csv", stringsAsFactors = FALSE, na.strings=c("","NA"))
