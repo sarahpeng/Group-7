@@ -126,11 +126,13 @@ page_five <- tabPanel("Survey",tags$h4("Background"),
                         of the population, most people recognize the importance of donation and are open
                         to the idea of being a donor. How can this number increase?"), tags$h4("Graphs"),
                       p("When asked if many people in the national transplant waiting list die because the
-                        organ they need isn't donated in time, people responded:"), p("When asked if you 
-                        strongly support, support oppose, or strongly oppose the donation of organs for transplants,
-                        people responded"), p("When asked if you would want your organs donated after death, people responded"),
-                      p("And when asked whether you beleive the following statements about organ donation are true, people responded"), 
-                      tags$h4("Analysis"), plotOutput("waitlist_plot"))
+                        organ they need isn't donated in time, people responded:"),plotOutput("waitlist_plot"),
+                        p("When asked if you strongly support, support oppose, or strongly oppose the donation of organs for transplants,
+                        people responded"), plotOutput("transSupport_plot"), p("When asked if you would want your organs donated after death, people responded"),
+                      plotOutput("donateDeath_plot"), p("And when asked whether you beleive the following statements 
+                      about organ donation are true, people responded"), plotOutput("kidney_plot"),plotOutput("liver_plot"),plotOutput("lung_plot"),
+                      tags$h4("Analysis")
+                      )
 
 ui <- navbarPage(
   "My Application", 

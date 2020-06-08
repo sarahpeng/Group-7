@@ -130,7 +130,7 @@ server <- function(input, output) {
   lung <- graphs%>% filter(Question == "Lung") %>% select(Response,Percent)
   lungs <- ggplot(lung) + geom_col(mapping = aes(x = reorder(lung$Response, -lung$Percent) , y = lung$Percent )) + ggtitle("Percent of People whobelieve that lung") +
     xlab("Response") + ylab("Percent")
-  lung
+  lungs
   })
   
   
