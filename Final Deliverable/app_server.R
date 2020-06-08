@@ -35,13 +35,12 @@ server <- function(input, output) {
   
  
   output$blood_type_plot <- renderPlot({
-    print(input$Donor_Type)
+    
     one_donor_type_data <- df %>%
       filter(Donor.Type == input$Donor_Type) %>%
       filter(Organ == input$Organ)
     
-    print(one_donor_type_data)
-    
+
     # drops all ABO rows
     one_donor_type_data<-one_donor_type_data[!(one_donor_type_data$Blood.Type=="All ABO"),]
     # drops the To Date column
@@ -70,11 +69,14 @@ server <- function(input, output) {
     
     # plot the defined x and y points for each blood type on same plot
     ggplot() +
-      geom_line(mapping = aes(x = x_A, y = y_A), color = "blue") +
-      geom_line(mapping = aes(x = x_B, y = y_B), color = "red") +
-      geom_line(mapping = aes(x = x_O, y = y_O), color = "green") +
-      geom_line(mapping = aes(x = x_AB, y = y_AB), color = "orange")
-
+      geom_line(mapping = aes(x = x_A, y = y_A), color = "darkblue") +
+      geom_line(mapping = aes(x = x_B, y = y_B), color = "darkorchid1") +
+      geom_line(mapping = aes(x = x_O, y = y_O), color = "mediumseagreen") +
+      geom_line(mapping = aes(x = x_AB, y = y_AB), color = "deeppink3") +
+      ggtitle(title <- paste0(" Blood ", "type", " of ", input$Donor_Type, " for ", input$Organ,
+                              " from", " 1988 to 2020 ")) +
+      xlab("Year") + ylab(input$Organ) +
+      scale_color_discrete(name = "Blood type", labels = c("Type A", "Type B", "Type O", "Type AB"))
   })
   
   output$piechart_plot <- renderPlot({
@@ -95,7 +97,7 @@ server <- function(input, output) {
     lbls <- paste(lbls, pct)
     lbls <- paste(lbls,"%",sep="")
     p1 <- pie(slices, labels = lbls, col=rainbow(length(lbls)),
-              main="Living vs. Deceased")
+              main="Percentage of Living vs. Deceased from 1988-2020")
     
   })
   

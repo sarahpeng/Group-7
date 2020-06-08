@@ -29,6 +29,7 @@ page_two <- tabPanel(
   Organ_input,
   plotOutput("piechart_plot"),
   plotOutput("blood_type_plot")
+  
 )
 
 
