@@ -35,13 +35,12 @@ server <- function(input, output) {
   
  
   output$blood_type_plot <- renderPlot({
-    print(input$Donor_Type)
+    
     one_donor_type_data <- df %>%
       filter(Donor.Type == input$Donor_Type) %>%
       filter(Organ == input$Organ)
     
-    print(one_donor_type_data)
-    
+
     # drops all ABO rows
     one_donor_type_data<-one_donor_type_data[!(one_donor_type_data$Blood.Type=="All ABO"),]
     # drops the To Date column
@@ -51,30 +50,16 @@ server <- function(input, output) {
     # melts data so that it can be easily plotted
     m_donor_type_data <- melt(one_donor_type_data, id.vars=c("Donor.Type","Blood.Type","Organ"))
     
-    # for each blood type, create x and y values that are associated w that blood type
-    for (blood_type in c("A", "B", "O", "AB")){
-      # filter to only that blood type
-      temp_df <- m_donor_type_data[(m_donor_type_data$Blood.Type==blood_type), ]
-      # create x_O, x_A, x_B.... etc.
-      x_name <- paste("x_", blood_type, sep = "")
-      # set name to formatted date type
-      assign(x_name, as.numeric(format(as.Date(sub('.', '', temp_df$variable),format="%Y"),'%Y')))
-      
-      # create y_O, y_A,.... etc.
-      y_name <- paste("y_", blood_type, sep = "")
-      # set variable to the numeric values of that year
-      assign(y_name, as.numeric(temp_df$value))
-      
-    }
+    m_donor_type_data$clean_value <- as.numeric(sub(',', '', m_donor_type_data$value))
+    m_donor_type_data$year <- as.numeric(format(as.Date(sub('.', '', m_donor_type_data$variable),format="%Y"),'%Y'))
+    m_donor_type_data <-m_donor_type_data[!(m_donor_type_data$year=="2020"),]
     
-    
-    # plot the defined x and y points for each blood type on same plot
-    ggplot() +
-      geom_line(mapping = aes(x = x_A, y = y_A), color = "blue") +
-      geom_line(mapping = aes(x = x_B, y = y_B), color = "red") +
-      geom_line(mapping = aes(x = x_O, y = y_O), color = "green") +
-      geom_line(mapping = aes(x = x_AB, y = y_AB), color = "orange")
-
+    ggplot(m_donor_type_data, aes(x = year, y = clean_value, color = Blood.Type)) +
+      geom_line() +
+      ggtitle(title <- paste0(" Blood ", "type", " of ", input$Donor_Type, " for ", input$Organ,
+                              " from", " 1988 to 2019 ")) +
+      xlab("Year") + ylab(paste0("Number of ", input$Organ, "s")) +
+      scale_color_discrete(name = "Blood type", labels = c("Type A", "Type B", "Type O", "Type AB"))
   })
   
   output$piechart_plot <- renderPlot({
@@ -95,7 +80,7 @@ server <- function(input, output) {
     lbls <- paste(lbls, pct)
     lbls <- paste(lbls,"%",sep="")
     p1 <- pie(slices, labels = lbls, col=rainbow(length(lbls)),
-              main="Living vs. Deceased")
+              main="Percentage of Living vs. Deceased from 1988-2020")
     
   })
   
