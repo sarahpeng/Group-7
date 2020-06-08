@@ -58,7 +58,7 @@ server <- function(input, output) {
       geom_line() +
       ggtitle(title <- paste0(" Blood ", "type", " of ", input$Donor_Type, " for ", input$Organ,
                               " from", " 1988 to 2019 ")) +
-      xlab("Year") + ylab(input$Organ) +
+      xlab("Year") + ylab(paste0("Number of ", input$Organ, "s")) +
       scale_color_discrete(name = "Blood type", labels = c("Type A", "Type B", "Type O", "Type AB"))
   })
   
