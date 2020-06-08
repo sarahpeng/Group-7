@@ -49,8 +49,8 @@ page_two <- tabPanel(
   br(),
   br(),
   plotOutput("piechart_plot"),
-  tags$h4("Donors"),
-  p("In this page, the graph shows the blood type of either the living or
+  tags$h1("Donors"),
+  tags$h2("In this page, the graph shows the blood type of either the living or
      deceased donor organ from 1988 to 2019. We did not include the data from
      2020 because it was incomplete. From the graph, we see that theorgans that
      were the least donated from living donors were the heart, pancreas, and
@@ -72,8 +72,8 @@ page_two <- tabPanel(
      disease, and cancers are some of the top ten leading deaths in the U.S.
      Overall, from the pie graph, we see that there is a 16% higher chance of organ
      donations coming from deceased donors than living donors from 1988 up to 2020."),
-  tags$h4("Note:"),
-  p("The pie chart shows the proportion of the two types of donors. As you can see,
+  tags$h1("Note:"),
+  tags$h2("The pie chart shows the proportion of the two types of donors. As you can see,
      there is more deceased donors than living donors. The interactive part shows users
      the trend of supply of a specific organ throughout the last 30 years. By picking a donor
      type first, then a organ, the graph will mark the trend using different colored lines
