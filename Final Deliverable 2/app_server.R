@@ -100,7 +100,7 @@ server <- function(input, output) {
   output$waitlist_plot <- renderPlot({  
     waitlistDie <- graphs%>% filter(Question == "WaitlistDie") %>% select(Response,Percent)
     ylabel <- c("Strongly Agree", "Somewhat Agree", "Somewhat Disagree", "Strongly Disagree")
-    waitlist<- ggplot(waitlistDie) + geom_col(mapping = aes(x = reorder(ylabel, -waitlistDie$Percent) , y = waitlistDie$Percent )) + ggtitle("Percent of People who Agree that People on the Waitlist Die") +
+    waitlist<- ggplot(waitlistDie) + geom_col(mapping = aes(x = reorder(ylabel, -waitlistDie$Percent) , y = waitlistDie$Percent )) + ggtitle("Percent of People Who Agree That People on the Waitlist Die Because the Organ They Need Isn't Donated in Time") +
       xlab("Response") + ylab("Percent")
     waitlist
   })
@@ -116,28 +116,28 @@ server <- function(input, output) {
   output$donateDeath_plot <- renderPlot({
   deathDonate <- graphs%>% filter(Question == "DeathDonate") %>% select(Response,Percent)
   ddlabel <- c("Likely Yes","Likely No","Strong No","Strong Yes")
-  donateDeath <- ggplot(deathDonate) + geom_col(mapping = aes(x = reorder(ddlabel, -deathDonate$Percent) , y = deathDonate$Percent )) + ggtitle("Percent of People who are Willing to Donate Thei Organs After Death") +
+  donateDeath <- ggplot(deathDonate) + geom_col(mapping = aes(x = reorder(ddlabel, -deathDonate$Percent) , y = deathDonate$Percent )) + ggtitle("Percent of People who are Willing to Donate Their Organs After Death") +
     xlab("Response") + ylab("Percent")
   donateDeath
   })
   
   output$kidney_plot <- renderPlot({
   kidney <- graphs%>% filter(Question == "Kidney") %>% select(Response,Percent)
-  kidneys<- ggplot(kidney) + geom_col(mapping = aes(x = reorder(kidney$Response, -kidney$Percent) , y = kidney$Percent )) + ggtitle("Percent of People whobelieve that kidney") +
+  kidneys<- ggplot(kidney) + geom_col(mapping = aes(x = reorder(kidney$Response, -kidney$Percent) , y = kidney$Percent )) + ggtitle("Percent of People Who Believe That Kidneys Can Be Donated From a Living Donor") +
     xlab("Response") + ylab("Percent")
   kidneys
   })
   
   output$liver_plot <- renderPlot({
   liver <- graphs%>% filter(Question == "Liver") %>% select(Response,Percent)
-  livers<- ggplot(liver) + geom_col(mapping = aes(x = reorder(liver$Response, -liver$Percent) , y = liver$Percent ))  + ggtitle("Percent of People whobelieve that liver") +
+  livers<- ggplot(liver) + geom_col(mapping = aes(x = reorder(liver$Response, -liver$Percent) , y = liver$Percent ))  + ggtitle("Percent of People Who Believe That Parts of Livers Can be Donated From Living Donors") +
     xlab("Response") + ylab("Percent")
   livers
   })
   
   output$lung_plot <- renderPlot({
   lung <- graphs%>% filter(Question == "Lung") %>% select(Response,Percent)
-  lungs <- ggplot(lung) + geom_col(mapping = aes(x = reorder(lung$Response, -lung$Percent) , y = lung$Percent )) + ggtitle("Percent of People whobelieve that lung") +
+  lungs <- ggplot(lung) + geom_col(mapping = aes(x = reorder(lung$Response, -lung$Percent) , y = lung$Percent )) + ggtitle("Percent of People Who Believe That Parts of Lungs Can be Donated From Living Donors") +
     xlab("Response") + ylab("Percent")
   lungs
   })
