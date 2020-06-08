@@ -6,7 +6,7 @@ waiting_time <- read.csv("Organ_by_Blood_Type.csv", stringsAsFactors = FALSE)
 library(shiny)
 page_one <- tabPanel(
   "Introduction",
-  tags$h1("Why this subject?"),
+  tags$h1("Objective:"),
   p("Organ donation is an important part of the health care system which has not received enough attention. Many of the people only have heard about it, however, they either have not signed up to
     be donors nor have them realized the fact that there are lives saved by receiving the right organ. We want to compare the attitudes towards organ donations and transplants to the actual donation
     statistics to see if the correlation between support and action. And probably make more people participate in the system."),
@@ -16,11 +16,13 @@ page_one <- tabPanel(
     users will have findings including but not limited to which organ is most wanted and which organ has more supplies than demands. As for the table, latest information on how general population view organ
     donation is shown. The attitudes and actions are compared."),
   tags$h1("Soruces:"),
-  p("Data used is mainly from [Organ Donation Statistics](https://www.organdonor.gov/statistics-stories/statistics.html)"),
-  p("The survey is from National Survey of Organ Donation Attitudes and Practices, 2019](https://www.organdonor.gov/sites/default/files/about-dot/files/nsodap-organ-donation-survey-2019.pdf)"),
+  p("Data used is mainly from: "), fluidPage(uiOutput("tab")),
+  p("The survey is from: "), fluidPage(uiOutput("tab2")),
   tags$h1("Contributors:"),
   p("Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan")
+  
 )
+
 page_two <- tabPanel(
   "Organ Donor" 
 )
