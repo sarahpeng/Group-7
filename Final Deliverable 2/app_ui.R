@@ -18,8 +18,8 @@ page_one <- tabPanel(
   including but not limited to which organ is most wanted and which organ has more supplies than demands. As for the table, latest information on how 
   general population view organ donation is shown. The attitudes and actions are compared."),
   tags$h1("Sources:"),
-  tags$h2("Data used is mainly from: "), fluidPage(uiOutput("tab")),
-  tags$h2("The survey is from: "), fluidPage(uiOutput("tab2")),
+  tags$h2("Graphing Data for Donor & Waitlist pages: "), fluidPage(uiOutput("tab")),
+  tags$h2("survey Data: "), fluidPage(uiOutput("tab2")),
   tags$h1("Contributors:"),
   tags$h2("Savannah Umali-Jepson, Sarah Peng, Lufei Wang, Ming Yan"),
   p(""),
