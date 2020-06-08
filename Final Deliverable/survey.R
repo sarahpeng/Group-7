@@ -12,8 +12,8 @@ kable(population, col.names = c("Total", "", "10,000"))
 signedup <- graphs%>% filter(Question == "SignedUp") %>% select(Response, Percent)
 willing <- graphs%>%filter(Question == "Willing") %>% select(Response, Percent)
 
-kable(signedup)
-kable(willing)
+tableSignedUp <- kable(signedup)
+tableWilling <- kable(willing)
 
 #bar
 waitlistDie <- graphs%>% filter(Question == "WaitlistDie") %>% select(Response,Percent)
